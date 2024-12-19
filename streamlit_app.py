@@ -39,7 +39,7 @@ def failure_detection(input_list, n_iteration, column_name="Blade"):
             df_copy.loc[i, "Failure_status"] = "Failed"
 
             for j, k in enumerate(range(i + 1, len(df_copy))):
-                df_copy.loc[k, column_name] = input_list[j % len(input_list)]
+                df_copy.loc[k, column_name] = input_list[j % len(input_list)]*100
 
     return df_copy
 
